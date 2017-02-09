@@ -1,6 +1,6 @@
 import React from 'react';
 import { storiesOf, action } from '@kadira/storybook';
-import { Leaflet } from '../SRC';
+import { Leaflet } from '../src';
 
 const displayName = Leaflet.displayName || 'Leaflet';
 const title = 'OpenStreetMap overlaid with geoJSON data';
@@ -20,4 +20,4 @@ export default () => storiesOf(displayName, module)
     description,
     demoCode,
     propDocs,
-  )
+  );
