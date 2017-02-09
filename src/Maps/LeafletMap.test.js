@@ -1,6 +1,6 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import Button from './Leaflet';
+import Leaflet from './LeafletMap';
 
 describe('Leaflet', () => {
   const wrapper = shallow(<Leaflet />);
