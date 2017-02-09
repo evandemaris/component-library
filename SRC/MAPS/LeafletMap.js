@@ -1,11 +1,12 @@
 import React from 'react';
 import { Map, TileLayer, Marker, Popup } from 'react-leaflet';
 import classNames from 'classnames/bind';
-import styles from './Leaflet.styles.css';
+import styles from './LeafletMap.css';
+
 
 const cx = classNames.bind(styles);
 const className = cx({ base: true });
-
+require('../../assets/leaflet.css');
 class Leaflet extends React.Component {
   constructor() {
     super();
@@ -16,7 +17,6 @@ class Leaflet extends React.Component {
       zoom: 11,
     };
   }
-
   render() {
     const position = [this.state.lat, this.state.lng];
     return (

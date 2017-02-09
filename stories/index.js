@@ -9,9 +9,9 @@ import barChartStory from './BarChart.story';
 import dropdownStory from './DropdownMenu.story';
 import coreStory from './Core.story';
 import Welcome from './Welcome';
-import leaflet from './Leaflet.story'
+import leaflet from './LeafletStory'
 
-import '../components/global.styles.css';
+import '../SRC/global.styles.css';
 
 // stories can be added directly here
 storiesOf('Welcome', module)
