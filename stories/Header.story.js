@@ -1,24 +1,21 @@
 import React from 'react';
 import { storiesOf, action } from '@kadira/storybook';
+<<<<<<< HEAD:stories/Core.story.js
 import { Header } from '../SRC';
+=======
+import { Header } from '../src';
+>>>>>>> 998e68a247dcddbc537dfb757894a00b980368da:stories/Header.story.js
 
 const displayName = Header.displayName || 'Header';
 const title = 'Simple usage';
 const description = `
-  This is some basic usage with the button with providing a label to show the text.
-  Clicking should trigger an action.`;
+  a basic nav with logo & nav controls`;
 
 const demoCode = () => (
-  <Header onClick={action('clicked')} />
+  <Header title="Civic" />
 );
 
 const propDocs = { inline: true, propTables: [Header] };
-
-const altDemo = () => (
-  <Header onClick={action('clicked')}>😀 😎 👍 💯</Header>
-);
-
-const altTitle = 'with some emoji';
 
 export default () => storiesOf(displayName, module)
   .addWithInfo(
@@ -26,5 +23,9 @@ export default () => storiesOf(displayName, module)
     description,
     demoCode,
     propDocs,
+<<<<<<< HEAD:stories/Core.story.js
   )
   .add(altTitle, altDemo);
+=======
+  );
+>>>>>>> 998e68a247dcddbc537dfb757894a00b980368da:stories/Header.story.js
