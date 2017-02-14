@@ -7,6 +7,13 @@ const title = 'OpenStreetMap overlaid with geoJSON data';
 const description = `
   This is a Leaflet.js map with geoJSON data handled through React.`;
 
+const geoJSON = {
+  "type": "FeatureCollection",
+  "crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+  "features": [
+  { "type": "Feature", "properties": { "NAME": "Test point", "URL": "http:\/\/www.google.com\/", "LINE": "F-G" }, "geometry": { "type": "Point", "coordinates": [ 45.52, -122.67 ] } },
+] }
+
 const demoCode = () => (
   <Leaflet />
 );
