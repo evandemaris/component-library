@@ -22,6 +22,13 @@ const markers = [/*
   }*/
 ];
 
+function onEachFeature(feature, layer) {
+  if(feature.properties && feature.properties.NAME) {
+    layer.bindPopup(feature.properties.NAME);
+    layer.on('mouseover', e => {console.log(e); e.target.openPopup();});
+  }
+}
+
 const MakeMarker = ({ map, pos }) => (
   <Marker map={map} position={pos}>
     <Popup>
@@ -39,6 +46,7 @@ class Leaflet extends React.Component {
       zoom: 11,
     };
   }
+
   render() {
     const centerPosition = [this.state.lat, this.state.lng];
     return (
@@ -47,7 +55,7 @@ class Leaflet extends React.Component {
           attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
           url='http://{s}.tile.osm.org/{z}/{x}/{y}.png'
         />
-        <GeoJSON data = {data}/>
+        <GeoJSON data = {data} onEachFeature = {onEachFeature}/>
         {markers.map(({position}) => (<MakeMarker pos={position} />))}
 
       </Map>
